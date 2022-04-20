@@ -5,9 +5,11 @@ shift + cmd - space :   yabai -m window --toggle float
 
 
 # Iterm bindings
+
 # This is trash
 # cmd - return : open -a /Applications/iTerm.app
-cmd - return : ~/.spawnIterm.sh
+# this i better
+cmd - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
 
 # finder
 cmd + shift - return : open ~/Desktop
@@ -22,13 +24,25 @@ cmd + shift - return : open ~/Desktop
 # make floating window fill left-half of screen
 # alt + cmd - up   :  yabai -m window --grid 1:1:0:0:1:1
 
-# focus 
+# focus
 
-#alt - left : yabai -m window --focus west
-#alt - down : yabai -m window --focus south
-#alt - up : yabai -m window --focus north
-#alt - right : yabai -m window --focus east
+# alt - left : yabai -m window --focus west
+# alt - down : yabai -m window --focus south
+# alt - up : yabai -m window --focus north
+# alt - right : yabai -m window --focus east
 
+# resize
+
+alt + shift - right  :  yabai -m window --resize left:-50:0; \
+                        yabai -m window --resize right:50:0
+alt + shift - up     :  yabai -m window --resize bottom:0:50; \
+                        yabai -m window --resize top:0:-50
+alt + shift - down   :  yabai -m window --resize bottom:0:-50; \
+                        yabai -m window --resize top:0:50
+alt + shift - left   :  yabai -m window --resize left:50:0; \
+                        yabai -m window --resize right:-50:0
+
+alt - n: yabai -m window --opacity 0.5
 
 
 # toggle sticky (show on all spaces)
@@ -37,8 +51,10 @@ alt - s: yabai -m window --toggle sticky
 # toggle topmost (keep above other windows)
 alt - o : yabai -m window --toggle topmost
 
- # balance size of windows
-shift + alt - 0 : yabai -m space --balance
+ # balance size of windows and reset opacity
+shift + alt - 0 : yabai -m space --balance;\
+                  yabai -m window --opacity 0.0
+
 
 # toggle sticky(+float), topmost, picture-in-picture
 alt - p : yabai -m window --toggle sticky;\
@@ -67,23 +83,20 @@ cmd - 7 : yabai -m space --focus 7
 cmd - 8 : yabai -m space --focus 8
 cmd - 9 : yabai -m space --focus 9
 
-# send window to desktop and follow focus
-shift + cmd - 1 : yabai -m window --space  1; # yabai -m space --focus 1
-shift + cmd - 2 : yabai -m window --space  2; # yabai -m space --focus 2
-shift + cmd - 3 : yabai -m window --space  3; # yabai -m space --focus 3
-shift + cmd - 4 : yabai -m window --space  4; # yabai -m space --focus 4
-shift + cmd - 5 : yabai -m window --space  5; # yabai -m space --focus 5
-shift + cmd - 6 : yabai -m window --space  6; # yabai -m space --focus 6
-shift + cmd - 7 : yabai -m window --space  7; # yabai -m space --focus 7
-shift + cmd - 8 : yabai -m window --space  8; # yabai -m space --focus 8
-shift + cmd - 9 : yabai -m window --space  9; # yabai -m space --focus 9
+# send window to desktop ########  and follow focus
+shift + cmd - 1 : yabai -m window --space  1;  # yabai -m space --focus 1
+shift + cmd - 2 : yabai -m window --space  2;  # yabai -m space --focus 2
+shift + cmd - 3 : yabai -m window --space  3;  # yabai -m space --focus 3
+shift + cmd - 4 : yabai -m window --space  4;  # yabai -m space --focus 4
+shift + cmd - 5 : yabai -m window --space  5;  # yabai -m space --focus 5
+shift + cmd - 6 : yabai -m window --space  6;  # yabai -m space --focus 6
+shift + cmd - 7 : yabai -m window --space  7;  # yabai -m space --focus 7
+shift + cmd - 8 : yabai -m window --space  8;  # yabai -m space --focus 8
+shift + cmd - 9 : yabai -m window --space  9;  # yabai -m space --focus 9
 
 
 # send window to monitor and follow focus
 alt + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
 alt + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
 alt + cmd - 3  : yabai -m window --display 3; yabai -m display --focus 3
-
-
-
 
