@@ -17,7 +17,7 @@ configs = {
         {'app': 'Code', 'space': 3},
         {'app': 'Slack', 'space': 4}
     ],
-    '2monitor': [
+    '2monitors': [
         {'app': 'Google Chrome', 'space': 1},
         {'app': 'Notes', 'space': 1},
         {'app': 'KeePassXC', 'space': 1},
@@ -35,13 +35,18 @@ def run(cmd: str):
 
 
 @click.command()
-@click.argument('config')
+@click.argument('config', required=False, default=None)
 def main(config):
+    if(not config):
+        # list all config names
+        echo(f'Available configs: {", ".join(configs.keys())}')
+        exit(0)
+
+    # get all windows
     windows = json.loads(run(f'{YABAI} -m query --windows'))
-    
     if config not in configs:
         # generate config from open windows
-        print({
+        echo({
             config: [
                 {
                     'app': window['app'],
