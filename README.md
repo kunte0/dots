@@ -21,3 +21,12 @@
 
 - packet manager [brew](https://brew.sh/)
 - tmux, zsh, nvim
+
+### security
+
+- everything from [Objective-See](https://objective-see.com/products.html)
+- password manager [KeePassXC](https://keepassxc.org/)
+
+### coding
+
+- VSCode is good
