@@ -8,6 +8,7 @@
 - hotkey daemon [skhd](https://github.com/koekeishiya/skhd)
 - minimal statusbar i like [SpaceId](https://github.com/dshnkao/SpaceId)
   - bloated statusbar [Übersicht](http://tracesof.net/uebersicht/)
+- finder extension [Open in Terminal & VSCode ](https://github.com/Ji4n1ng/OpenInTerminal)
 
 
 ### term
