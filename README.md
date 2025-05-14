@@ -5,7 +5,7 @@
 ### wm
 
 - tiling window management [yabai](https://github.com/koekeishiya/yabai)
-  - some poeople like [AeroSpace](https://github.com/nikitabobko/AeroSpace)
+  - some people like [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 - hotkey daemon [skhd](https://github.com/koekeishiya/skhd)
 - minimal statusbar [SpaceId](https://github.com/dshnkao/SpaceId)
   - bloated statusbar [Übersicht](http://tracesof.net/uebersicht/)
